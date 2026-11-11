@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xiao-jiayu 的個人主頁</title>
+  <!-- 引入 jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #333; }
+    h1, h2 { border-bottom: 2px solid #eaecef; padding-bottom: 8px; }
+    .card { background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 8px; padding: 16px; margin: 20px 0; }
+    .btn { background: #0969da; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; }
+    .btn:hover { background: #0854ae; }
+    #secret-box { display: none; margin-top: 15px; padding: 10px; background: #dafbe1; border: 1px solid #4ac26b; border-radius: 6px; }
+  </style>
+</head>
+<body>
+
+  <h1>個人學習成果專頁</h1>
+  <p>歡迎來到我的個人展示頁！本頁面包含 Git、前端基礎與 jQuery 互動功能的學習成果。</p>
+
+  <div class="card">
+    <h2>jQuery 功能示範</h2>
+    <p>點擊按鈕動態切換內容顯示狀態：</p>
+    <button id="toggleBtn" class="btn">點擊切換顯示/隱藏</button>
+    <div id="secret-box">
+      <strong>🎉 jQuery 運作成功！</strong> 透過 <code>$('#toggleBtn').click()</code> 觸發 <code>slideToggle()</code>。
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>學習與 AI 協同心得</h2>
+    <p><strong>學習重點：</strong>本次實作演練了 Git 本機版本控制流程（init, status, add, commit, push），並運用 HTML5、CSS 與 jQuery 建立響應式個人展示頁。</p>
+    <p><strong>AI 使用體會：</strong>在 AI 的步驟引導下，能夠精準避開摸索盲區，快速鎖定核心語法並解決環境與部署問題，顯著提高開發與學習效率。</p>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      $('#toggleBtn').click(function() {
+        $('#secret-box').slideToggle(300);
+      });
+    });
+  </script>
+
+</body>
+</html>
